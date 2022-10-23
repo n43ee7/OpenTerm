@@ -1,6 +1,6 @@
 /****************************************************************************
  *  (c) Nabeel Nayyar (2022)                                                *
- *     University of Texas at Arlington                                     *
+ *     University of Texas                                                  *
  *     CSE 3320 | Operating Systems | OpenTerm v1.0                         *
  *                                                                          *
  *              < Main OpenTerm runtime >                                   *

@@ -1,6 +1,6 @@
 /****************************************************************************
  *  (c) Nabeel Nayyar (2022)                                                *
- *     University of Texas at Arlington                                     *
+ *     University of Texas                                                  *
  *     CSE 3320 | Operating Systems | OpenTerm v1.0                         *
  *                                                                          *
  *              < Supplementary Functions used by OpenTerm >                *
@@ -9,8 +9,10 @@
 #include "OpenTerm.h"
 
 
-// Traverses the WD and returns cute looking stuff. I need
-//    to take this away but rn its ok. I think
+// Traverses the working directory and returns a pointer to a list of the 
+//  contents of the directory pointed towards
+// Not really how I intended it to be but rn it works
+// Right now returns the cursor position tho
 int ConsoleDirectoryResponse(DIR *OpenDir, WINDOW *object, int cursor){
     struct dirent *entrydir;
     int files = 0;
@@ -24,10 +26,9 @@ int ConsoleDirectoryResponse(DIR *OpenDir, WINDOW *object, int cursor){
 
     return cursor;        
 }
-
 // Initiates a change in directory with exception handling
 // Returns 1 for sucessfull and 0 for failed change
-int ConsoleShiftDirectory(char *gtdir) {
+int ConsoleShiftDirectory(char *gtdir){
     int chre;
     chre = chdir(gtdir);
     
@@ -36,37 +37,4 @@ int ConsoleShiftDirectory(char *gtdir) {
     } else {
         return 1;
     }
-}
-
-// ConsoleDirResponse Returns the List of the contents of the items in the
-//   working directory.
-void _ConsoleDirectoryResponse(DIR *OpenDir, char REG[DIR_LEN]) {
-    struct dirent *entrydir;
-
-    if (OpenDir) {
-        while ((entrydir = readdir(OpenDir)) != NULL) {
-            //printf("%s\n", entrydir->d_name);
-            strcat(REG, entrydir->d_name);
-            strcat(REG, " "); // Added buffer layer for search
-        }
-        closedir(OpenDir);
-    }
-}
-
-// Searching key and dictionary
-// 1 -> for valid | 0 -> for invalid constrain 
-// Understanding system constrains while searching
-//  INPUTS:          500                 2048
-int strXsr(char key[CMD_LEN], char str[DIR_LEN], char delim[2]) {
-
-    char *token;
-    token = strtok(str, delim);
-   
-    while (token != NULL) {
-        if (strcmp(key, token) == 0) {
-            return 1;
-        }
-        token = strtok(NULL, delim);
-    }
-    return 0;
 }
