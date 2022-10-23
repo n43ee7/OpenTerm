@@ -1,7 +1,7 @@
 =================================================================================================================================================
                                                             OPENTERM README
 =================================================================================================================================================
-Nabeel Nayyar | 1001842770
+Nabeel Nayyar | 1001842770 | CSE 3320 Operating Systems
 8/22/2019
 
 
@@ -23,7 +23,10 @@ trivial results on windows machines. Outputs may not be the as anticipated if co
 
         Step 3) $ ./OpenTerm
 
-Note: If post-execution the program reports any errors please view the Error Log of this 
+Note: If post-execution the program reports any errors please view the Error Log of this
+
+        <PLEASE DO NOT LAUNCH OPENTERM WITH SUDO, THE PROGRAM BEHAVIOR IS UNPREDICTABLE AND IT IS NOT TESTED WITH SUDO PRIVLEGES>
+
 =================================================================================================================================================
                                                                 Commands of Use
 =================================================================================================================================================
@@ -33,7 +36,7 @@ Note: If post-execution the program reports any errors please view the Error Log
     > ls
         Lists contents of the working directory
     
-    > clear
+    > cls
         Clears the terminal screen
     
     > editfn 
@@ -45,10 +48,15 @@ Note: If post-execution the program reports any errors please view the Error Log
     > rm
         Operator to delete a file in the working directory
     
+    > run
+        Operator to run an executable file in the working directory.
+    
 =================================================================================================================================================
                                                                 Error Log
 =================================================================================================================================================
 
     > ER:555 
-    missing a "core file" please note the program depends on a few external files that should be INSIDE
+    Missing a "core file" please note the program depends on a few external files that should be INSIDE
     the working directory. These "core files" are used for pretty-printing certian details using NCURSES.  
+
+    > The rest of then errors are pretty self-explanitory

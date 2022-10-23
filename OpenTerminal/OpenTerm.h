@@ -35,5 +35,7 @@
 // Declaring the external functions in the header 
 int ConsoleDirectoryResponse(DIR *OpenDir, WINDOW *object, int cursor);
 int ConsoleShiftDirectory(char *gtdir);
+void _ConsoleDirectoryResponse(DIR *OpenDir, char REG[DIR_LEN]);
+int strXsr(char key[CMD_LEN], char str[DIR_LEN], char delim[2]);
 
 #endif
