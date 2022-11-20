@@ -30,8 +30,9 @@ $ cd OpenTerm/
 Compile the Source Code:
 _NOTE: Please use GCC instead of G++ for stabler results_
  \
+ ```
 gcc OpenTermv1.c OpenTermSup.c -lncurses -o OpenTerm
-
+``
 Now run a shell Instance:
 ```
 $ ./OpenTerm
