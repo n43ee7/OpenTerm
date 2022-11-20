@@ -15,7 +15,7 @@ ________________________________________________________________________________
  \
 nCurses 5.7.0 or later linked with GCC
 ________________________________________________________________________________________
-Step 1) Please make sure you are in the project dependency "??"
+Please make sure you are in the project dependency "xxx" to execute shell. You may need to adjust global permissions to call the shell globally. 
 
 #### Installation & Importing Project Dependencies
  \
