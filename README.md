@@ -29,7 +29,7 @@ Move to the _installed_ Directory:
 ```
 $ cd OpenTerm/
 ```
-Compile the Source Code:
+Compile the Source Code: \
 _NOTE: Please use GCC instead of G++ for stabler results_
 
 ```
